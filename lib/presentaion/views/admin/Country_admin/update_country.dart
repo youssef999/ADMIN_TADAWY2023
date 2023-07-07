@@ -18,10 +18,10 @@ import '../../../const/app_message.dart';
 import 'add_new_country.dart';
 
 class UpdateCountryView extends StatelessWidget {
-String id,name,code;
+String id,name,code,price;
 
 
-UpdateCountryView({required this.id,required this.name,required this.code});
+UpdateCountryView({required this.id,required this.name,required this.code,required this.price});
 
   @override
   Widget build(BuildContext context) {
@@ -59,6 +59,20 @@ UpdateCountryView({required this.id,required this.name,required this.code});
                         Padding(
                           padding: const EdgeInsets.all(15.0),
                           child: CustomTextFormField(
+                            controller:cubit.priceCountryController,
+                            color:Colors.black,
+                            hint: "$price ",
+                            max: 2,
+                            obs: false,
+                            obx: false,
+                            ontap:(){},
+                            type:TextInputType.text,
+                          ),
+                        ),
+                        const SizedBox(height: 20,),
+                        Padding(
+                          padding: const EdgeInsets.all(15.0),
+                          child: CustomTextFormField(
                             controller:cubit.nameController,
                             color:Colors.black,
                             hint: "$name ",
@@ -88,7 +102,7 @@ UpdateCountryView({required this.id,required this.name,required this.code});
                           color2:ColorsManager.primary,
                           onPressed:(){
 
-                            cubit.updateCountry(name, code,id);
+                            cubit.updateCountry(name, code,id,price);
 
                             },
                         ),

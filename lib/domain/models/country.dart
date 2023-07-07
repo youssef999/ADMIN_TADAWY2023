@@ -12,19 +12,20 @@ class Country {
   Country({
     required this.id,
     required this.name,
-    required this.code
+    required this.code,required this.price
   });
 
   int id;
   String name;
   String code;
+  String price;
 
 
   factory Country.fromJson(Map<String, dynamic> json) => Country (
     id: int.parse(json["id"]),
     name: json["name"]??"",
     code: json["countryCode"]??"",
-
+    price:json['price']??""
   );
 
 // Map<String, dynamic> toJson() => {

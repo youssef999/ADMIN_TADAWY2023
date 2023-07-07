@@ -47,20 +47,7 @@ class DoctorType extends StatelessWidget {
 
  Widget CatWidget(List<Cat> catList){
 
-   double height=300;
-   if(catList.length>4){
-     height=400;
-   }
-
-   if(catList.length>5){
-     height=500;
-   }
-   if(catList.length>7){
-     height=640;
-   }
-   if(catList.length>9){
-     height=780;
-   }
+   double height=3000;
 
    return   SizedBox(
      height: height,
@@ -125,9 +112,7 @@ class DoctorType extends StatelessWidget {
                onTap: () {
 
                  Get.to(DoctorsView(cat: catList[index].cat2,));
-                 //
-                 // print(AllDoctorsView(catList[index].cat2));
-                 // Get.to(AllDoctorsView(catList[index].cat2));
+
 
                },
              ),

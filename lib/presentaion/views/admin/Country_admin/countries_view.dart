@@ -113,6 +113,7 @@ class AdminCountryView extends StatelessWidget {
                            name: listApp[index].name,
                            code: listApp[index].code,
                            id: listApp[index].id.toString(),
+                           price: listApp[index].price,
                          ));
 
                        },

@@ -40,6 +40,7 @@
   static const getBooking = '$hostConnection/doctor/get_booking.php';
   static const SEARCH = '$hostConnection/doctor/search.php';
   static const allDoctorsData = '$hostConnection/patient/all_doctors.php';
+  static const allDoctorsData2 = '$hostConnection/patient/all_doctors2.php';
   static const AdminGetDoctors = '$hostConnection/doctor/all_doc.php';
   static const AllSales = '$hostConnection/doctor/all_sales.php';
   static const SalesReg = '$hostConnection/doctor/sales_reg.php';

@@ -41,6 +41,7 @@ import 'admin_state.dart';
   var imageLink = '';
   Coins  coins= Coins();
   TextEditingController nameController = TextEditingController();
+  TextEditingController priceCountryController = TextEditingController();
   TextEditingController codeController = TextEditingController();
   TextEditingController idController = TextEditingController();
   TextEditingController emailController = TextEditingController();
@@ -548,10 +549,18 @@ import 'admin_state.dart';
   }
 
 
-  updateCountry(String name,String code,String id) async {
+  updateCountry(String name,String code,String id,String price) async {
 
     String n='';
     String c='';
+    String p='';
+    if(priceCountryController.text==''){
+      p=price;
+    }
+    else{
+      p=priceCountryController.text;
+    }
+
     if(nameController.text==''){
       n=name;
     }
@@ -571,6 +580,7 @@ import 'admin_state.dart';
           {
             'name':n,
             'countryCode':c,
+            'price':p,
             'id':id
            // 'image':imageLink
           }
@@ -1026,7 +1036,7 @@ import 'admin_state.dart';
     try {
       emit(GetAllDoctorsLoadingState());
       var res = await http.post(
-        Uri.parse(API.allDoctorsData),
+        Uri.parse(API.allDoctorsData2),
         body: {
           'cat2': cat2,
         },

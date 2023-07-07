@@ -102,7 +102,7 @@ Widget AllDoctorsWidget(List<DoctorModel> listApp, AdminCubit cubit,String cat) 
                               child:Image.network( listApp[index].doctor_image.toString()),
                             ),
                             const SizedBox(height: 30,),
-                            Row(
+                            Column(
                               children: [
                                 Custom_Text(
                                   text: listApp[index].doctor_name.toString(),
@@ -110,12 +110,12 @@ Widget AllDoctorsWidget(List<DoctorModel> listApp, AdminCubit cubit,String cat) 
                                   fontSize: 20,
                                   alignment:Alignment.topRight,
                                 ),
-                                const SizedBox(width: 40,),
+                                const SizedBox(height: 20,),
                                 Custom_Text(
                                   alignment:Alignment.topRight,
                                   text: listApp[index].doctor_cat.toString(),
                                   color:ColorsManager.primary,
-                                  fontSize: 20,
+                                  fontSize: 17,
                                 ),
                               ],
                             ),

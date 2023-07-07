@@ -70,6 +70,7 @@ class AdminView extends StatelessWidget {
 
                   },
               ),
+
               SizedBox(height: 20,),
               CustomButton(
                 text: 'الاعلانات ',
