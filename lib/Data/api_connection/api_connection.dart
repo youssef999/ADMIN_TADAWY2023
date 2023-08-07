@@ -71,7 +71,9 @@
   static const AddCountry = '$hostConnection/doctor/add_country.php';
   static const UpdateCountry = '$hostConnection/doctor/update_country.php';
   static const AddBestAdd = '$hostConnection/doctor/add_best_ad.php';
+
   static const AddNewAdd = '$hostConnection/doctor/add_adsx.php';
+
   static const DeleteCountry = '$hostConnection/doctor/delete_country.php';
 
   static const DeleteAdmin = '$hostConnection/doctor/delete_admin.php';

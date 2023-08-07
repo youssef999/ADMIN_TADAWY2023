@@ -19,6 +19,7 @@ import 'BAKA/baka_view2.dart';
 import 'Cat/cat_view.dart';
 import 'Sales/all_sales_view.dart';
 import 'add_new_admin.dart';
+import 'admin_login.dart';
 import 'all_admins.dart';
 import 'doctors/doctors_view.dart';
 
@@ -198,6 +199,22 @@ class AdminView extends StatelessWidget {
                   },
               ),
               const SizedBox(height: 20,),
+              //box.read('Id')??'x';
+
+
+
+              CustomButton(
+                text:  ' تسجيل الخروج    ',
+                color1:ColorsManager.primary,
+                color2:Colors.white,
+                onPressed:(){
+
+                  final box=GetStorage();
+                  box.remove('Id');
+                  Get.to(  AdminLoginView());
+                },
+              ),
+              SizedBox(height: 20,),
             ],
           ),
         ),

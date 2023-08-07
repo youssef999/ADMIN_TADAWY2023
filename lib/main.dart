@@ -1,8 +1,6 @@
-
 import 'package:bloc/bloc.dart';
 import 'package:doctors_app/presentaion/views/admin/admin_login.dart';
 import 'package:doctors_app/presentaion/views/admin/admin_view.dart';
-import 'package:doctors_app/presentaion/views/splash/splash_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get_storage/get_storage.dart';
