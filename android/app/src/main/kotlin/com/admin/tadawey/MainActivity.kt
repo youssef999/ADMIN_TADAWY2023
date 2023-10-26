@@ -1,0 +1,6 @@
+package com.admin.tadawey
+
+import io.flutter.embedding.android.FlutterActivity
+
+class MainActivity: FlutterActivity() {
+}
